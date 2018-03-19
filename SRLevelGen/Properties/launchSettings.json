@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SRMapGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "input.sr output.sr"
+    }
+  }
+}
