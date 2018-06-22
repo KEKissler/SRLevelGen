@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SRLvlGen
+namespace dontUseMe
 {
     //Originally Authored by: Kyle Kissler - 2/20/2018
     //GitHub: KEKissler
     //
+    /*
     public class BiasedRNG
     {
         private int divisions;// the number of divisions used to approximate the given function. Give a higher number to get a better representation
@@ -399,7 +400,7 @@ namespace SRLvlGen
         {
             assignCorners();
             int[,] toReturn = new int[32, 96];//4,1 creates a proper 1 by 4 matrix /shrug
-            int maxMajor = 10, minMajor = 5, maxMinor = 5/*5*/, minMinor = -5/*-5*/; //temp location for these critical values
+            int maxMajor = 10, minMajor = 5, maxMinor = 5/*5*//*, minMinor = -5/*-5*//*; //temp location for these critical values
             Vector2 cursor = corners[0];
             for (int i = 0; i < 5; ++i)
             {
@@ -516,7 +517,7 @@ namespace SRLvlGen
             :   new List<Vector2>() { new Vector2(7, 23), new Vector2(87, 23), new Vector2(87, 7), new Vector2(7, 15), new Vector2(7, 23) };
         }
     }
-
+/*
     class Program
     {
         static void Main(string[] args)
@@ -545,5 +546,5 @@ namespace SRLvlGen
 
             }
         }
-    }
+    }*/
 }

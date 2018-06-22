@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace SRMapGenerator
+namespace SRLvlGen
 {
     //Useful paths for kyle's laptop
     //SR level file location
@@ -12,6 +12,17 @@ namespace SRMapGenerator
     {
         static void Main(string[] args)
         {
+            string repeat = "";
+            Console.Write("Enter an integer seed to generate: ");
+            string seedInput = Console.ReadLine();
+            LvlShapeGen test = (seedInput.Length > 0) ? new LvlShapeGen(int.Parse(seedInput)) : new LvlShapeGen();
+            while(repeat != "q")
+            {
+                test.genNewLevelShape(false, true);
+                Console.WriteLine("\nEnter q to quit or anything else to generate another: ");
+                repeat = Console.ReadLine();
+            }
+            /*
             BinaryReader b = new BinaryReader(File.Open(args[0], FileMode.Open));
             Level level = new Level();
             level.Read(b);
@@ -21,14 +32,12 @@ namespace SRMapGenerator
             {
                 Console.WriteLine(t.GetName());
             }
-            level.SetTilemaps(test);*/
+            level.SetTilemaps(test);
             foreach(Tilemap t in level.tilemaps)
             {
                 if(t.GetName() == "Collision")
                 {
-                    //Tilemap toSet = new Tilemap(t.GetVersion(), t.name, /*GEN STUFF GOES HERE*/ new int[1000, 500]);
-
-                    t.SetTilemap(/*GEN STUFF GOES HERE*/ new int[1000, 500]);
+                    //t.SetTilemap(GEN STUFF GOES HERE, new int[1000, 500]);
                 }
             }
             b.Close();
@@ -36,6 +45,7 @@ namespace SRMapGenerator
             level.Write(w);
             w.Close();
             Console.ReadLine();
+            */
         }
     }
 }
